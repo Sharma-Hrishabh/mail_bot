@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+  <div class="review">
+
+    <form class="site-form" action="{% url 'campaign:delete' %}" method="post">
+    <button type="button" name="button">Delete Contacts</button>
+    </form>
+    <form class="site-form" action="{% url 'campaign:upcsv' %}" method="get">
+      <button type="sumbmit" name="button">Upload CSV</button>
+    </form>
+  </div>
+{% endblock %}
