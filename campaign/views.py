@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from . import forms
 import logging
 from django.contrib import messages
+import smtplib
+import time
 app_name='campaign'
 
 
@@ -50,7 +52,33 @@ def upload_csv(request):
                 form.save()
             else:
                 print("error")
-    return HttpResponseRedirect(reverse("campaign:upload_csv"))
+    return HttpResponseRedirect(reverse("campaign:review"))
 
 def review(request):
     return render(request,"campaign/review.html")
+
+
+def delcontacts(request):
+    print("hello")
+    Contacts.objects.all().delete()
+    print("deleted")
+    return HttpResponseRedirect(reverse("campaign:upload_csv"))
+
+def send(request):
+    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    server.login("man11invisible", "12345@@@@@")
+
+    contacts=Contacts.objects.all()
+
+    for contact in contacts:
+        name=contact.name
+        email=contact.email
+        server.sendmail(
+          "sharmahrishabh@cevgroup.org",
+          email,
+          "Hello! "+name+" keep up with you good work.")
+        print(str(email),"\n")
+        time.sleep(60)
+    server.quit()
+
+    return HttpResponse('Successful')
