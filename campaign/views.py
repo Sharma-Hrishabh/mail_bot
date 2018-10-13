@@ -74,7 +74,7 @@ def send(request):
         name=contact.name
         email=contact.email
         server.sendmail(
-          "sharmahrishabh@cevgroup.org",
+          "30hrs1999@gmail.com",
           email,
           "Hello! "+name+" keep up with you good work.")
         print(str(email),"\n")

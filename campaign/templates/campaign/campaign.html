@@ -1,6 +1,6 @@
 {% extends 'base_layout.html' %}
 {% block content %}
-  <div class="create-campaign">
+  <div class="create-campaign" id="overlay">
     <h2>Create an article</h2>
     <form class="site-form" action="{% url 'campaign:create'%}" method="post" enctype="multipart/form-data">
       {% csrf_token %}

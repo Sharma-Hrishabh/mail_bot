@@ -1,6 +1,19 @@
 /* body{ clear: both;
   background-color: #00b3fe;
 } */
+body{
+background-color: black;
+}
+h1{
+  text-align: center;
+}
+.container{
+  z-index:1;
+  background-color: black;
+}
+.container-fluid{
+  z-index:1;
+}
 a:hover{
 background-color : #ef3d1a;
 }
@@ -65,4 +78,22 @@ a.highlight{
     font-size: 20px;
     border-radius: 4px;
     margin: 10px 0;
+}
+
+
+.btn-primary{
+color:black !important;
+background-color:#FFD700 !important;
+border-color:#FFD700 !important;
+
+
+}
+.btn-primary>a{
+  color:black !important;
+  text-decoration: none !important;
+}
+
+a:hover{
+  color:black !important;
+  text-decoration: none !important;
 }
