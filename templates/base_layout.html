@@ -32,7 +32,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link" href="campaign/">Campaign</a>
+            </li>
+            <li>
               <a class="nav-link" href="{% url 'home' %}">Home</a>
+
             </li>
 
 
@@ -40,7 +44,7 @@
             <li class="nav-item">
               <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
                 {% csrf_token%}
-                <button class="logout" type="submit">Logout</button>
+                <button class="logout btn-primary" style="margin-top:5px;" type="submit">Logout</button>
               </form>
             </li>
 
@@ -57,7 +61,7 @@
       <h1 style="margin-top:100px;z-index:1;color:#FFD700;">Welcome to mail campaign portal</h1>
       <!-- <button class="btn btn-primary" style="text-align:center;position:fixed;top:50%;left:45%;"> -->
         <!-- <a href="/campaign">New Campaign</a> -->
-      </button>
+      <!-- </button> -->
 
     </div>
     {% block content %}
