@@ -25,8 +25,8 @@ def campaign(request):
 
 
 
-def send(request):
-    return HttpResponse('sent')
+# def send(request):
+#     return HttpResponse('sent')
 
 
 def upcsv(request):
@@ -81,4 +81,8 @@ def send(request):
         time.sleep(60)
     server.quit()
 
-    return HttpResponse('Successful')
+    return render(request,"campaign/successful.html")
+
+
+def restart(request):
+    return HttpResponseRedirect(reverse("campaign:create"))

@@ -10,6 +10,7 @@ url(r'^$',views.campaign,name="create"),
 url(r'^review/',views.review,name="review"),
 url(r'^delete/',views.delcontacts,name="delcontacts"),
 url(r'^send/',views.send,name="send"),
+url(r'^restart/',views.restart,name="restart"),
 url(r'^upcsv/',views.upcsv,name="upcsv"),
 url(r'^upload/csv/$', views.upload_csv, name='upload_csv'),
 

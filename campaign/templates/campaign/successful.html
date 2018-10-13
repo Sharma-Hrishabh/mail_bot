@@ -1,0 +1,11 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<div class="successful">
+  <h3>Action Successfull</h3>
+  <p>wanna start more campaigns?</p>
+  <form class="site-form" action="{% url 'campaign:restart' %}" method="get">
+    <button type="submit" name="button">New campaign</button>
+  </form>
+
+</div>
+{% endblock %}
