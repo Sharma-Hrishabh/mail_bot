@@ -1,6 +1,6 @@
 {% extends 'base_layout.html' %}
 {% block content %}
-  <div class="review">
+  <div class="container review">
 
     <form class="site-form" action="{% url 'campaign:delcontacts' %}" method="get">
     <button type="submit" name="button">Delete Contacts</button>
@@ -11,5 +11,26 @@
     <form class="site-form" action="{% url 'campaign:send' %}" method="get">
       <button type="submit" name="button">Send</button>
     </form>
+<hr>
+</div>
+<div class="container">
+  <table id="example" class="display" style="width:100%">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+              </tr>
+          </thead>
+          <tbody>
+            {% for contact in contacts %}
+              <tr>
+                  <td>{{contact.name}}</td>
+                  <td>{{contact.email}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+
+
   </div>
+
 {% endblock %}

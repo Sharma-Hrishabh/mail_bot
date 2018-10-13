@@ -1,13 +1,16 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-    <h1>Login</h1>
+<div class="container">
+
+    <h1 style="color:#FFD700;">Login</h1>
     <form class="site-form" action="{% url 'accounts:login' %}" method="post">
         {% csrf_token %}
         {{ form }}
         {% if request.GET.next %}
         <input type="hidden" name="next" value="{{request.GET.next}}">
         {% endif %}
-        <input type="submit" value="Login">
+        <input class="ml-auto mr-auto" type="submit" style="text-align:center;" value="Login">
     </form>
+  </div>
 {% endblock %}

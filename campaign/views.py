@@ -55,7 +55,8 @@ def upload_csv(request):
     return HttpResponseRedirect(reverse("campaign:review"))
 
 def review(request):
-    return render(request,"campaign/review.html")
+    contacts=Contacts.objects.all()
+    return render(request,"campaign/review.html",{'contacts':contacts })
 
 
 def delcontacts(request):

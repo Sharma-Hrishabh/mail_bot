@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
 /* body{ clear: both;
   background-color: #00b3fe;
 } */
 body{
+font-family: 'Exo 2', sans-serif;
 background-color: black;
 }
-h1{
+h1,h2{
   text-align: center;
+  z-index:1;
+  color:#FFD700;
 }
 .container{
   z-index:1;
@@ -25,14 +29,19 @@ max-width: 350px;
 
 .site-form {
     margin-top: 60px;
-    border: 1px solid #00dba0;
+    border: 1px solid #FFD700;
     padding: 20px;
 }
-
+.site-form>label{
+  text-align: center;
+}
 .site-form input, .site-form textarea{
     display: block;
-    margin: 20px 0 0px 0;
+    /* margin: 20px 0 0px 0; */
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 a.highlight{
@@ -96,4 +105,8 @@ border-color:#FFD700 !important;
 a:hover{
   color:black !important;
   text-decoration: none !important;
+}
+
+label{
+  color:#FFD700;
 }

@@ -1,14 +1,15 @@
 {% extends 'base_layout.html' %}
 {% block content %}
   <div class="create-campaign" id="overlay">
-    <h2>Create an article</h2>
+    <h2>Add Contacts Manually</h2>
     <form class="site-form" action="{% url 'campaign:create'%}" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{form}}
-      <input type="submit" value="Create">
+      <input class="ml-auto mr-auto" type="submit" value="Create">
     </form>
     <h3 style="text-align:center">OR Upload CSV</h3>
 <form class="site-form" action="{% url 'campaign:upcsv' %}" method="get">
-  <button type="sumbmit" name="button">Upload CSV</button>
+  <input class="ml-auto mr-auto" type="submit" value="Upload CSV">
+  <!-- <button type="sumbmit" name="button">Upload CSV</button> -->
 </form>
 {% endblock %}
