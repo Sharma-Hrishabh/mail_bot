@@ -67,7 +67,7 @@ def delcontacts(request):
 
 def send(request):
     server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.login("man11invisible", "12345@@@@@")
+    server.login("man11invisible", "*")
 
     contacts=Contacts.objects.all()
 
